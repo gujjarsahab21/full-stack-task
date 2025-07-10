@@ -4,7 +4,7 @@ export default function SubscriberList() {
   const [subscribers, setSubscribers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/subscribers")
+    fetch(`${import.meta.env.VITE_API_URL}/api/subscribers`)
       .then(res => res.json())
       .then(data => setSubscribers(data));
   }, []);

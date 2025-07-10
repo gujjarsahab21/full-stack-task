@@ -24,11 +24,12 @@ export default function ContactForm() {
     e.preventDefault();
     if (!validate()) return;
 
-    await fetch("http://localhost:5000/api/contacts", {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/contacts`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
     });
+
     toast.success("Form submitted successfully!");
     setForm({ fullName: "", email: "", mobile: "", city: "" });
     setErrors({});
@@ -50,7 +51,9 @@ export default function ContactForm() {
               {errors[field] && <p className="text-red-500 text-sm mt-1">{errors[field]}</p>}
             </div>
           ))}
-          <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700">Submit</button>
+          <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700">
+            Submit
+          </button>
         </form>
       </div>
     </section>

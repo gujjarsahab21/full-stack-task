@@ -23,11 +23,11 @@ export default function AddClientForm() {
     const formData = new FormData();
     formData.append("image", file);
 
-    const res = await fetch("http://localhost:5000/api/upload/image", {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/upload/image`, {
       method: "POST",
       body: formData
     });
-
+    
     const data = await res.json();
     return data.imageUrl;
   };
@@ -46,7 +46,7 @@ export default function AddClientForm() {
         image: imageUrl
       };
 
-      await fetch("http://localhost:5000/api/clients", {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/clients`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(finalForm)

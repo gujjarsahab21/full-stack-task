@@ -17,7 +17,7 @@ export default function AddProjectForm() {
     const formData = new FormData();
     formData.append("image", file);
 
-    const res = await fetch("http://localhost:5000/api/upload/image", {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/upload/image`, {
       method: "POST",
       body: formData
     });
@@ -39,7 +39,7 @@ export default function AddProjectForm() {
         image: imageUrl
       };
 
-      await fetch("http://localhost:5000/api/projects", {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/projects`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(finalForm)

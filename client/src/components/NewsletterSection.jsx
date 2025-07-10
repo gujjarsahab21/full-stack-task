@@ -6,7 +6,7 @@ export default function NewsletterSection() {
 
   const handleSubscribe = async e => {
     e.preventDefault();
-    await fetch("http://localhost:5000/api/subscribers", {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/subscribers`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email })
@@ -26,7 +26,7 @@ export default function NewsletterSection() {
             required
             placeholder="Enter your email"
             onChange={e => setEmail(e.target.value)}
-            className="flex-grow px-4 py-3 rounded  focus:outline-none"
+            className="flex-grow px-4 py-3 rounded focus:outline-none"
           />
           <button type="submit" className="bg-white text-blue-700 px-6 py-3 rounded font-semibold hover:bg-gray-100">
             Subscribe

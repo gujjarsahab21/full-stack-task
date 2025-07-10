@@ -4,7 +4,7 @@ export default function ContactList() {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/contacts")
+    fetch(`${import.meta.env.VITE_API_URL}/api/contacts`)
       .then(res => res.json())
       .then(data => setContacts(data));
   }, []);
