@@ -38,7 +38,7 @@ export default function ContactForm() {
     <section className="py-10 bg-white px-4">
       <div className="max-w-2xl mx-auto bg-gray-50 p-8 rounded-xl shadow-md">
         <form onSubmit={handleSubmit} className="space-y-4">
-          {['FullName', 'Email', 'Mobile', 'City'].map(field => (
+          {['fullName', 'email', 'mobile', 'city'].map(field => (
             <div key={field}>
               <input
                 name={field}

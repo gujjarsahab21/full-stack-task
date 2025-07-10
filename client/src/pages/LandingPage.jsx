@@ -51,7 +51,7 @@ export default function LandingPage() {
           </p>
           <button
             onClick={() => navigate("/admin")}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition cursor-pointer"
           >
             Switch to Admin Mode
           </button>

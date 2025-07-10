@@ -14,7 +14,7 @@ export default function AdminPanel() {
           <h1 className="text-2xl font-bold text-blue-800">Admin Dashboard</h1>
           <button
             onClick={() => navigate("/")}
-            className="bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 cursor-pointer transition"
           >
             Switch to Landing Mode
           </button>
