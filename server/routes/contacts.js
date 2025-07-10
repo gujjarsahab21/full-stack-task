@@ -10,7 +10,6 @@ router.post("/", async (req, res) => {
   res.status(201).json({ message: "Contact submitted" });
 });
 
-// Get all contacts (for admin)
 router.get("/", async (req, res) => {
   const contacts = await Contact.find();
   res.json(contacts);

@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import AdminPanel from "./pages/AdminPanel";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1 className='bg-red-200'>h</h1>
+      <ToastContainer position="top-right" autoClose={3000} />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/admin" element={<AdminPanel />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
