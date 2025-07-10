@@ -5,10 +5,10 @@ This is a full-stack application developed as part of the FLIPR Full Stack Devel
 ## 🧩 Features
 
 ### ✅ Landing Page
-- Projects section (fetched from backend)
-- Happy Clients section (fetched from backend)
-- Contact Form (saves data to backend)
-- Newsletter Subscription (saves to backend)
+- Projects section 
+- Happy Clients section 
+- Contact Form 
+- Newsletter Subscription 
 - Responsive UI and modern design
 
 ### ✅ Admin Panel
